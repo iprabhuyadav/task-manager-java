@@ -23,6 +23,7 @@ public class TaskManagerServiceImpl implements TaskManagerService {
 		
 		TaskManager taskManager = new TaskManager();
 		taskManager.setTaskName(taskManagerDto.getTaskName());
+		taskManager.setDueDate(taskManagerDto.getDueDate());
 		taskManager.setActiveFlag("Active");
 		
 		taskManagerRepository.save(taskManager);

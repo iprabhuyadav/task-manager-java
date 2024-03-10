@@ -1,6 +1,7 @@
 package com.example.demo.entity;
 
 import java.sql.Timestamp;
+import java.util.Date;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -23,6 +24,9 @@ public class TaskManager {
 	
 	@Column(name = "created_on", insertable = true, updatable = false)
 	private Timestamp createdOn= new Timestamp(System.currentTimeMillis());
+	
+	@Column(name = "due_date")
+	private Date dueDate;
 	
 	@Column(name="active_flag")
 	private String activeFlag;
@@ -51,6 +55,13 @@ public class TaskManager {
 		this.createdOn = createdOn;
 	}
 
+	public Date getDueDate() {
+		return dueDate;
+	}
+	public void setDueDate(Date dueDate) {
+		this.dueDate = dueDate;
+	}
+
 	public String getActiveFlag() {
 		return activeFlag;
 	}
@@ -58,4 +69,6 @@ public class TaskManager {
 	public void setActiveFlag(String activeFlag) {
 		this.activeFlag = activeFlag;
 	}
+	
+	
 }
