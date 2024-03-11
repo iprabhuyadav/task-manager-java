@@ -2,7 +2,7 @@ package com.example.demo.service;
 
 import com.example.demo.dto.TaskManagerDto;
 import com.example.demo.entity.Response;
-import com.example.demo.entity.TaskManager;
+import com.example.demo.entity.Tasks;
 
 public interface TaskManagerService {
 

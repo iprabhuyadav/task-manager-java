@@ -12,7 +12,7 @@ import javax.persistence.Table;
 
 @Table(name="tasks")
 @Entity
-public class TaskManager {
+public class Tasks {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
