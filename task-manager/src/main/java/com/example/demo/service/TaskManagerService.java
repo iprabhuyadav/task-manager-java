@@ -1,6 +1,7 @@
 package com.example.demo.service;
 
 import com.example.demo.dto.TaskManagerDto;
+import com.example.demo.dto.UserRegistrationDto;
 import com.example.demo.entity.Response;
 import com.example.demo.entity.Tasks;
 
@@ -15,5 +16,7 @@ public interface TaskManagerService {
 	Response<Object> getAllTasks();
 
 	Response<Object> deleteTask(Integer taskId);
+
+	Response<Object> userRegistration(UserRegistrationDto userRegistrationDto);
 
 }

@@ -1,7 +1,6 @@
 package com.example.demo.entity;
 
 import java.sql.Timestamp;
-import java.util.Date;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -25,8 +24,8 @@ public class UserRegistration {
 	@Column(name = "created_on", insertable = true, updatable = false)
 	private Timestamp createdOn= new Timestamp(System.currentTimeMillis());
 	
-	@Column(name = "email")
-	private Date email;
+	@Column(name = "email_address")
+	private String emailAddress;
 	
 	@Column(name="active_flag")
 	private String activeFlag;
@@ -55,12 +54,12 @@ public class UserRegistration {
 		this.createdOn = createdOn;
 	}
 
-	public Date getEmail() {
-		return email;
+	public String getEmailAddress() {
+		return emailAddress;
 	}
 
-	public void setEmail(Date email) {
-		this.email = email;
+	public void setEmailAddress(String emailAddress) {
+		this.emailAddress = emailAddress;
 	}
 
 	public String getActiveFlag() {

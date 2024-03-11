@@ -7,9 +7,12 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.example.demo.dto.TaskManagerDto;
+import com.example.demo.dto.UserRegistrationDto;
 import com.example.demo.entity.Response;
 import com.example.demo.entity.Tasks;
+import com.example.demo.entity.UserRegistration;
 import com.example.demo.repository.TaskManagerRepository;
+import com.example.demo.repository.UserRepository;
 import com.example.demo.service.TaskManagerService;
 
 @Service
@@ -17,6 +20,9 @@ public class TaskManagerServiceImpl implements TaskManagerService {
 	
 	@Autowired
 	TaskManagerRepository taskManagerRepository;
+	
+	@Autowired
+	UserRepository userRepository;
 
 	@Override
 	public Response<Object> createTask(TaskManagerDto taskManagerDto) {
@@ -103,5 +109,17 @@ public class TaskManagerServiceImpl implements TaskManagerService {
 		    return new Response<>(200, "Tasks List Fetched Successfully",existingTask);	
 		}
 
+	}
+
+	@Override
+	public Response<Object> userRegistration(UserRegistrationDto userRegistrationDto) {
+		UserRegistration userRegistration = new UserRegistration();
+		userRegistration.setUserName(userRegistrationDto.getUserName());
+		userRegistration.setEmailAddress(userRegistrationDto.getEmailAddress());
+		userRegistration.setActiveFlag("Active");
+		
+		userRepository.save(userRegistration);
+		
+		return new Response<>(200, "User Registered Successfully");
 	}
 }

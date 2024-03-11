@@ -12,6 +12,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.example.demo.dto.TaskManagerDto;
+import com.example.demo.dto.UserRegistrationDto;
 import com.example.demo.entity.Response;
 import com.example.demo.service.TaskManagerService;
 
@@ -55,6 +56,14 @@ public class TaskManagerController {
 	@DeleteMapping(value = "/deleteTask/{taskId}")
 	public @ResponseBody Response<Object> deleteTask(@PathVariable("taskId") Integer taskId) {
 		return taskManagerService.deleteTask(taskId);
+	}
+	
+	
+	// API for user-registration
+
+	@PostMapping(value = "/userRegistration")
+	public @ResponseBody Response<Object> userRegistration(@RequestBody UserRegistrationDto userRegistrationDto) {
+		return taskManagerService.userRegistration(userRegistrationDto);
 	}
 
 }

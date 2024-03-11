@@ -8,4 +8,4 @@ The application can do following things:
 3) View Task/ Task List
 4) Delete Task 
 
-The application is developed in Java 8 using Spring Boot Framework, REST API and PostgreSQL database.
+The application is developed in Java using Spring Boot Framework, REST API and PostgreSQL database.
