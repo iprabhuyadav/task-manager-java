@@ -116,6 +116,7 @@ public class TaskManagerServiceImpl implements TaskManagerService {
 		UserRegistration userRegistration = new UserRegistration();
 		userRegistration.setUserName(userRegistrationDto.getUserName());
 		userRegistration.setEmailAddress(userRegistrationDto.getEmailAddress());
+		userRegistration.setPassword(userRegistrationDto.getPassword());
 		userRegistration.setActiveFlag("Active");
 		
 		userRepository.save(userRegistration);

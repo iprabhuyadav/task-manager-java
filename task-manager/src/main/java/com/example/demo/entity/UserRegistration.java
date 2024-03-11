@@ -29,6 +29,9 @@ public class UserRegistration {
 	
 	@Column(name="active_flag")
 	private String activeFlag;
+	
+	@Column(name="password")
+	private String password;
 
 	public Integer getUserId() {
 		return userId;
@@ -70,4 +73,11 @@ public class UserRegistration {
 		this.activeFlag = activeFlag;
 	}
 
+	public String getPassword() {
+		return password;
+	}
+
+	public void setPassword(String password) {
+		this.password = password;
+	}
 }

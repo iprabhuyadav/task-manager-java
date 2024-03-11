@@ -6,6 +6,8 @@ public class UserRegistrationDto {
 	
 	private String emailAddress;
 	
+	private String password;
+	
 	private String activeFlag;
 
 	public String getUserName() {
@@ -26,6 +28,16 @@ public class UserRegistrationDto {
 
 	public void setEmailAddress(String emailAddress) {
 		this.emailAddress = emailAddress;
+	}
+	
+	
+
+	public String getPassword() {
+		return password;
+	}
+
+	public void setPassword(String password) {
+		this.password = password;
 	}
 
 	public String getActiveFlag() {
