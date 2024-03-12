@@ -10,26 +10,32 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
-@Table(name="tasks")
+@Table(name = "tasks")
 @Entity
 public class Tasks {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	@Column(name="task_id")
+	@Column(name = "task_id")
 	private Integer taskId;
-	
-	@Column(name="task_name")
+
+	@Column(name = "task_name")
 	private String taskName;
-	
+
 	@Column(name = "created_on", insertable = true, updatable = false)
-	private Timestamp createdOn= new Timestamp(System.currentTimeMillis());
-	
+	private Timestamp createdOn = new Timestamp(System.currentTimeMillis());
+
 	@Column(name = "due_date")
 	private Date dueDate;
-	
-	@Column(name="active_flag")
+
+	@Column(name = "active_flag")
 	private String activeFlag;
+
+	@Column(name = "user_id")
+	private Integer userId;
+
+	@Column(name = "collaborator_email")
+	private String collaboratorEmail;
 
 	public Integer getTaskId() {
 		return taskId;
@@ -58,6 +64,7 @@ public class Tasks {
 	public Date getDueDate() {
 		return dueDate;
 	}
+
 	public void setDueDate(Date dueDate) {
 		this.dueDate = dueDate;
 	}
@@ -69,6 +76,20 @@ public class Tasks {
 	public void setActiveFlag(String activeFlag) {
 		this.activeFlag = activeFlag;
 	}
-	
-	
+
+	public Integer getUserId() {
+		return userId;
+	}
+
+	public void setUserId(Integer userId) {
+		this.userId = userId;
+	}
+
+	public String getCollaboratorEmail() {
+		return collaboratorEmail;
+	}
+
+	public void setCollaboratorEmail(String collaboratorEmail) {
+		this.collaboratorEmail = collaboratorEmail;
+	}
 }

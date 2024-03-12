@@ -3,7 +3,6 @@ package com.example.demo.service;
 import com.example.demo.dto.TaskManagerDto;
 import com.example.demo.dto.UserRegistrationDto;
 import com.example.demo.entity.Response;
-import com.example.demo.entity.Tasks;
 
 public interface TaskManagerService {
 
@@ -18,5 +17,11 @@ public interface TaskManagerService {
 	Response<Object> deleteTask(Integer taskId);
 
 	Response<Object> userRegistration(UserRegistrationDto userRegistrationDto);
+
+	Response<Object> login(UserRegistrationDto userRegistrationDto);
+
+	Response<Object> getTaskByUserId(Integer userId);
+
+	Response<Object> getAllSharedTasksByUserId(Integer userId);
 
 }

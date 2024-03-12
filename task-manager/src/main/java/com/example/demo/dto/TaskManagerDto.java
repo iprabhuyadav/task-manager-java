@@ -3,12 +3,16 @@ package com.example.demo.dto;
 import java.util.Date;
 
 public class TaskManagerDto {
-	
+
 	private String taskName;
-	
+
 	private String activeFlag;
-	
+
 	private Date dueDate;
+
+	private Integer userId;
+
+	private String collaboratorEmail;
 
 	public String getTaskName() {
 		return taskName;
@@ -33,7 +37,20 @@ public class TaskManagerDto {
 	public void setDueDate(Date dueDate) {
 		this.dueDate = dueDate;
 	}
-	
-	
-	
+
+	public Integer getUserId() {
+		return userId;
+	}
+
+	public void setUserId(Integer userId) {
+		this.userId = userId;
+	}
+
+	public String getCollaboratorEmail() {
+		return collaboratorEmail;
+	}
+
+	public void setCollaboratorEmail(String collaboratorEmail) {
+		this.collaboratorEmail = collaboratorEmail;
+	}
 }

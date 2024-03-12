@@ -27,11 +27,14 @@ public class UserRegistration {
 	@Column(name = "email_address")
 	private String emailAddress;
 	
-	@Column(name="active_flag")
-	private String activeFlag;
+	@Column(name="mobile_no")
+	private String mobileNo;
 	
 	@Column(name="password")
 	private String password;
+	
+	@Column(name="active_flag")
+	private String activeFlag;
 
 	public Integer getUserId() {
 		return userId;
@@ -80,4 +83,13 @@ public class UserRegistration {
 	public void setPassword(String password) {
 		this.password = password;
 	}
+
+	public String getMobileNo() {
+		return mobileNo;
+	}
+
+	public void setMobileNo(String mobileNo) {
+		this.mobileNo = mobileNo;
+	}
+	
 }
